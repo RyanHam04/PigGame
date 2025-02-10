@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* Modified version of the stylesheet of 
+* The Complete JavaScript Course 2025: From Zero to Expert! by Jonas Schmedtmann, but modified it to a more cartoon/handdrawn style, overal css structure is very similar */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 400;
+  height: 100vh;
+  color: #222;
+  background: url('https://www.transparenttextures.com/patterns/notebook-dark.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  background: white;
+  border: 4px solid black;
+  border-radius: 12px;
+  box-shadow: 10px 10px 0px black;
+  overflow: hidden;
+  display: flex;
+  filter: url(#squiggly);
+}
+
+.player {
+  flex: 50%;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+.name {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 0px black;
+}
+
+.score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: black;
+  text-shadow: 2px 2px 0px black;
+  margin-bottom: auto;
+}
+
+.player-active {
+  background: rgba(0, 0, 0, 0.1);
+}
+.player-active .name {
+  font-weight: 900;
+  text-decoration: underline;
+}
+.player-active .score {
+  font-weight: 500;
+}
+
+.buffer {
+  background: white;
+  color: white;
+  border-radius: 9px;
+  width: 65%;
+  padding: 2rem;
+  text-align: center;
+  border: 3px solid black;
+}
+
+.buffer-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: black;
+}
+
+.buffer-score {
+  font-size: 3.5rem;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  background: white;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.7rem 2.5rem;
+  border: 3px solid black;
+  border-radius: 50rem;
+  box-shadow: 3px 3px 0px black;
+}
+
+
+.btn-new {
+  top: 5rem;
+}
+
+.btn-roll {
+  top: 40rem;
+}
+
+.btn-hold{
+  top: 50rem;
+}
+
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: none;
+}
+
+
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  filter: grayscale(100%);
+  box-shadow: 5px 5px 0px black;
+}
+
+/* WINNER */
+.player-winner {
+  background: #ccc;
+}
+
+.player-winner .name {
+  font-weight: 900;
+  color: black;
+  text-decoration: line-through;
+}
+
+.hidden {
+  display: none;
+}
+
+/* SQUIGGLY HAND-DRAWN BORDER */
+svg {
+  display: none;
+}
+
