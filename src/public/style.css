@@ -145,13 +145,12 @@ main {
 
 /* WINNER */
 .player-winner {
-  background: #ccc;
+  background: gold;
 }
 
 .player-winner .name {
   font-weight: 900;
   color: black;
-  text-decoration: line-through;
 }
 
 .hidden {

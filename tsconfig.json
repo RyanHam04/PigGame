@@ -1,0 +1,15 @@
+
+{
+  "compilerOptions": {
+    "outDir": "./src/public",  // Output compiled JS to public/
+    "rootDir": "./src/public",   
+    "target": "ESNext",       // Modern JavaScript
+    "module": "ESNext",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*"], // Include all TypeScript files in src/
+  "exclude": ["node_modules"]
+}
+
+
